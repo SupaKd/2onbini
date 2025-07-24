@@ -1,0 +1,63 @@
+.concept {
+    padding: 4rem 1rem;
+    background-color: var(--color-bg);
+    text-align: center;
+  
+    &__title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--color-accent12);
+      margin-bottom: 1rem;
+    }
+  
+    &__intro {
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      font-size: 1.2rem;
+      color: var(--color-accent13);
+    }
+  
+    &__grid {
+      display: grid;
+      gap: 2rem;
+  
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  
+    &__card {
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+      height: 300px;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        filter: brightness(0.75);
+        transition: transform 0.4s ease;
+        z-index: 1;
+        position: relative;
+      }
+  
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
+  
+    /* Ici on cible .concept__overlay à l'intérieur de .concept__card */
+    .concept__overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+      color: #fff;
+      text-align: left;
+      z-index: 5;
+    }
+  }
+  

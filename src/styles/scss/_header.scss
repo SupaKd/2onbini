@@ -1,0 +1,88 @@
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-bg);
+    padding: 0.3rem 0.5rem;
+    border-bottom: 2px solid var(--color-text);
+    z-index: 50;
+  
+    &__container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+  
+    &__menu-btn {
+      position: absolute;
+      left: 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      transition: var(--transition);
+    }
+  
+    &__logo {
+      width: 70px;
+    }
+  
+    &__nav {
+      background-color: var(--color-bg);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 1.5rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      animation: fadeIn 0.3s ease-in-out;
+  
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+  
+        li {
+          a {
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: var(--color-text);
+            transition: var(--transition);
+  
+            &:hover {
+              color: var(--color-accent);
+            }
+          }
+        }
+      }
+    }
+    .header__cart-btn {
+        position: absolute;
+        right: 0;
+        background: none;
+        border-radius: 15px;
+        cursor: pointer;
+        padding: 0.3rem;
+      }
+
+      .header__nav-login {
+        display: flex;
+        margin:1rem 0;
+        gap:1rem;
+      }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
